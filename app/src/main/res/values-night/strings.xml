@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_dummy_json">Hello Dummy JSON</string>
+    <string name="dummy_json">Dummy JSON</string>
+    <string name="loading_empolyees_list">Loading Empolyees List...</string>
+</resources>

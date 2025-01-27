@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dummy JSON</string>
+    <string name="hello_dummy_json">Hello Dummy JSON</string>
+    <string name="dummy_json">Dummy JSON</string>
+    <string name="loading_empolyees_list">Loading Empolyees List...</string>
+    <string name="employees_list">Employees List</string>
+</resources>
