@@ -1,11 +1,14 @@
 package com.example.dummyjson
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import kotlinx.coroutines.Dispatchers
 
 class ViewModelEmp(private val repository: Repository) : ViewModel() {
+
+    val employeeDetails = MutableLiveData<EmployeeListModel>()
 
     val emp = liveData(Dispatchers.IO){
         try {
@@ -21,6 +24,10 @@ class ViewModelEmp(private val repository: Repository) : ViewModel() {
         }catch (e: Exception){
             emit(Result.failure(Exception("Network Error: ${e.localizedMessage}")))
         }
+    }
+
+    fun setEmployeeDetails(empDetail : EmployeeListModel) {
+        employeeDetails.value = EmployeeListModel(empDetail.name, empDetail.age, empDetail.salary)
     }
 
 }

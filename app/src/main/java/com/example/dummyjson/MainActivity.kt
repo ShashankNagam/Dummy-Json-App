@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dummyjson.databinding.ActivityMainBinding
 
@@ -36,9 +35,9 @@ class MainActivity : AppCompatActivity(),AdapterEmp.OnItemClickListener {
         binding.jsonRecyclerView.adapter = adapterEmp
 
 
-        viewModel.emp.observe(this, Observer { result ->
+        viewModel.emp.observe(this) { result ->
             result.onSuccess { employees ->
-                Log.e("Response :","$employees")
+                Log.e("Response :", "$employees")
                 binding.loadingTxt.visibility = View.GONE
                 binding.jsonRecyclerView.visibility = View.VISIBLE
                 adapterEmp.updateList(employees)
@@ -48,17 +47,13 @@ class MainActivity : AppCompatActivity(),AdapterEmp.OnItemClickListener {
                 binding.loadingTxt.text = "Fail to load Employees List !!"
                 binding.jsonRecyclerView.visibility = View.GONE
             }
-        })
-
-
+        }
     }
 
     override fun onEmployeeClick(employee: EmployeeListModel) {
         val intent = Intent(this, MainActivity2::class.java)
-        Log.e("EMPLOYEE_NAME", employee.name)
-        intent.putExtra("employee_name", employee.name)
-        intent.putExtra("employee_age", employee.age)
-        intent.putExtra("employee_salary", employee.salary)
+        Log.e("EMPLOYEE_NAME", employee.name!!)
+        intent.putExtra("employee_model", employee)
         startActivity(intent)
 
 
