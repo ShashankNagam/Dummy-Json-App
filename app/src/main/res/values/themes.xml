@@ -4,11 +4,18 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
 
-        <item name="android:statusBarColor">@color/light_blue</item>
 
     </style>
 
-
-
     <style name="Theme.DummyJSON" parent="Base.Theme.DummyJSON" />
+
+
+    <style name="Theme.Dummy" parent="Base.Theme.DummyJSON" />
+
+    <style name="Theme.DummyNew" parent="Theme.Material3.Light.NoActionBar">
+
+
+        <item name="android:statusBarColor">@color/light_blue</item>
+    </style>
+
 </resources>

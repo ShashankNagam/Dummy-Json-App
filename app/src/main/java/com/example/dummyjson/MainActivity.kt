@@ -48,6 +48,11 @@ class MainActivity : AppCompatActivity(),AdapterEmp.OnItemClickListener {
                 binding.jsonRecyclerView.visibility = View.GONE
             }
         }
+
+        binding.settingBtn.setOnClickListener {
+            val i = Intent(this,SettingsActivity::class.java)
+            startActivity(i)
+        }
     }
 
     override fun onEmployeeClick(employee: EmployeeListModel) {
@@ -56,6 +61,8 @@ class MainActivity : AppCompatActivity(),AdapterEmp.OnItemClickListener {
         intent.putExtra("employee_model", employee)
         startActivity(intent)
 
-
     }
+
+
+
 }

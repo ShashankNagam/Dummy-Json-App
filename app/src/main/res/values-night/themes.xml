@@ -4,7 +4,13 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
 
-        <item name="statusBarBackground"> @color/light_blue</item>
+    </style>
 
+    <style name="Theme.DummyJSON" parent="Base.Theme.DummyJSON" />
+
+    <style name="Theme.DummyNew" parent="Theme.Material3.Dark.NoActionBar">
+
+
+        <item name="statusBarBackground"> @color/light_blue</item>
     </style>
 </resources>
