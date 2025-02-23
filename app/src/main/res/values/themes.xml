@@ -1,21 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.DummyJSON" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-
-
     </style>
-
     <style name="Theme.DummyJSON" parent="Base.Theme.DummyJSON" />
 
 
+    <!--New App Theme-->
     <style name="Theme.Dummy" parent="Base.Theme.DummyJSON" />
-
     <style name="Theme.DummyNew" parent="Theme.Material3.Light.NoActionBar">
 
-
+        <item name="colorPrimary">#2196F3</item> <!-- Blue -->
+        <item name="colorPrimaryVariant">#1976D2</item> <!-- Darker Blue -->
+        <item name="colorSecondary">#64B5F6</item>
         <item name="android:statusBarColor">@color/light_blue</item>
     </style>
+
 
 </resources>

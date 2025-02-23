@@ -7,12 +7,12 @@ class DjsonApplication : Application(){
 
     override fun onCreate() {
         super.onCreate()
-        ThemeManager.initializeTheme()
+        ThemeManager.initializeTheme(this)
     }
 
     override fun onTerminate() {
         super.onTerminate()
-        ThemeManager.stopThemeUpdate()
+//        ThemeManager.stopThemeUpdate()
     }
 
 }

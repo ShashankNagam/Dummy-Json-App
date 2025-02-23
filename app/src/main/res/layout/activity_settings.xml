@@ -8,6 +8,57 @@
     tools:context=".SettingsActivity"
     android:background="@color/white">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Theme Mode"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:textColor="@color/black"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dark Mode"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioLightMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light Mode"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioAutoMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto Mode"/>
+        </RadioGroup>
+
+            <TextView
+                android:id="@+id/autoTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App will Adjust the Theme Automatically \naccording to Day and Night"
+                android:paddingTop="5dp"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                android:layout_marginStart="30dp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
